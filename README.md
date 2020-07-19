@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Remons
+ * @Date: 2020-07-18 18:06:06
+ * @LastEditors: Remons
+ * @LastEditTime: 2020-07-19 19:04:20
+--> 
 # method
 
 #### 介绍
@@ -9,29 +17,35 @@
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  `npm i methods-remons`
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. 引入：  `import methods from 'methods-remons'`
+2. 使用：`methods.函数名(参数)`
 
-#### 参与贡献
+#### 函数说明 (* 为必填)
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+##### 时间格式化 `dateFormat( input | type )` 
+   1. `input (String | Number)`： `时间戳，为空获取当前时间`
+   2. `type (String) 可选值`：`yyyy/MM/dd HH:mm:ss` `yyyy/MM/dd` `HH:mm:ss` `yyyy-MM-dd`
+   
+##### 深拷贝 `deepClone( obj )` 
+1. 任意参数
+   
+##### 数组对象去重 `removeArrRepeat( arr,attribute )`
+1. `arr (Array)`:`数组对象`
+2. `attribute (String)`:`*根据参数去重`
+   
+##### 数组求和 `arrSUM ( data ) `
+1. `data(Array)`:`*数字数组`
+   
+##### 数组铺平 `arrFlat ( data )`
+1. `data(Array)`:`*一维或多维数组`
+   
+##### 数组分组 `arrGroup( data , num)`
+1. `data(Array)`:`*所要分组的数组`
+2. `num(Number)`:`*几个分成一组`
 
+##### 是否为PC端 `*IsPC()`
 
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)

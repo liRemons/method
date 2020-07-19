@@ -1,6 +1,6 @@
 {
   "name": "methods-remons",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "a plugin which can show time in chinese and english",
   "main": "index.js",
   "scripts": {
