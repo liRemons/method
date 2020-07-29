@@ -7,6 +7,7 @@ module.exports = {
     //项目出口
     path: path.resolve(__dirname, "./"), //打包后文件路径
     filename: "index.js", //打包后文件名称
+    libraryTarget: 'commonjs2'
   },
   plugins: [],
   module: {

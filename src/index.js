@@ -8,7 +8,6 @@
  */
 
 let methods = require("./methods");
-console.log(methods)
 module.exports = {
   dateFormat: methods.dateFormat,
   deepClone: methods.deepClone,
