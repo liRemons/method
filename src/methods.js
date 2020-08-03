@@ -125,6 +125,21 @@ function IsPC() {
   return flag;
 }
 
+// 数组求和
+function SUM(arr, attr) {
+  let type;
+  arr.forEach((item) => {
+    if (typeof item == "number") {
+      type = "number";
+    }
+  });
+  if (type === "number") {
+    return arr.reduce((pre, cur) => pre + cur);
+  } else {
+    return arr.reduce((pre, cur) => pre + cur[attr], 0);
+  }
+}
+
 module.exports = {
   dateFormat,
   deepClone,
@@ -133,4 +148,5 @@ module.exports = {
   arrFlat,
   arrGroup,
   IsPC,
+  SUM,
 };

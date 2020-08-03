@@ -16,4 +16,5 @@ module.exports = {
   arrFlat: methods.arrFlat,
   arrGroup: methods.arrGroup,
   IsPC: methods.IsPC,
+  SUM: methods.SUM,
 };
