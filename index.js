@@ -65,6 +65,7 @@ module.exports = (function (e) {
       arrFlat: n.arrFlat,
       arrGroup: n.arrGroup,
       IsPC: n.IsPC,
+      SUM: n.SUM,
     };
   },
   function (e, r, t) {
@@ -171,6 +172,21 @@ module.exports = (function (e) {
             break;
           }
         return t;
+      },
+      SUM: function (e, r) {
+        var t = void 0;
+        return (
+          e.forEach(function (e) {
+            "number" == typeof e && (t = "number");
+          }),
+          "number" === t
+            ? e.reduce(function (e, r) {
+                return e + r;
+              })
+            : e.reduce(function (e, t) {
+                return e + t[r];
+              }, 0)
+        );
       },
     };
   },
