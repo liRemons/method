@@ -35,6 +35,8 @@ function dateFormat(input, type) {
     value = `${y}-${M}-${d}`;
   } else if (type == "HH:mm:ss") {
     value = `${h}:${m}:${s}`;
+  } else if(type=='yyyy年MM月dd日 HH时mm分ss秒'){
+    value = `${y}年${M}月${d}日 ${h}时:${m}分:${s}秒`
   }
   return value;
 }
