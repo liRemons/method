@@ -35,25 +35,35 @@ function dateFormat(input, type) {
     value = `${y}-${M}-${d}`;
   } else if (type == "HH:mm:ss") {
     value = `${h}:${m}:${s}`;
-  } else if(type=='yyyy年MM月dd日 HH时mm分ss秒'){
-    value = `${y}年${M}月${d}日 ${h}时:${m}分:${s}秒`
+  } else if (type == "yyyy年MM月dd日 HH时mm分ss秒") {
+    value = `${y}年${M}月${d}日 ${h}时${m}分${s}秒`;
   }
   return value;
 }
 
 // 深拷贝
-function deepClone(obj) {
-  var target = {};
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      if (typeof obj[key] === "object") {
-        target[key] = deepClone(obj[key]);
-      } else {
-        target[key] = obj[key];
-      }
-    }
+function deepClone(data) {
+  const checkType = (val) => {
+    return Object.prototype.toString.call(val).slice(8, -1);
+  };
+  let BaseType = [
+    "Null",
+    "String",
+    "Boolean",
+    "Number",
+    "Undefined",
+    "Function",
+  ];
+  if (BaseType.includes(checkType(data))) {
+    return data;
   }
-  return target;
+  if (checkType(data) === "RegExp") return new RegExp(data);
+  if (checkType(data) === "Date") return new Date(data);
+  let newData = checkType(data) === "Array" ? [] : {};
+  for (let key in data) {
+    newData[key] = deepCopy(data[key]);
+  }
+  return newData;
 }
 
 // 数组对象去重
@@ -68,6 +78,9 @@ function removeArrRepeat(arr, attribute) {
 
 // 数组求和
 function arrSUM(data) {
+  if (data.length === 0) {
+    return 0;
+  }
   return data.reduce((total, value) => {
     return total + value;
   });
@@ -142,6 +155,41 @@ function SUM(arr, attr) {
   }
 }
 
+// 下载
+function download(url, type, name) {
+  const a = document.createElement("a");
+  a.setAttribute("download", name);
+  a.setAttribute("href", url);
+  if (navigator.msSaveBlob) {
+    let blob = Blob([url], { type: type });
+    return navigator.msSaveBlob(blob, name);
+  }
+  a.click();
+}
+
+// 滚动条监听
+function watchScroll(delay, scrollFn) {
+  const debonce = (fn, delay) => {
+    let timer = null;
+    return () => {
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(fn, delay);
+    };
+  };
+  window.onscroll = debonce(scrollFn, delay);
+}
+// 复制内容
+function copy(value) {
+  const input = document.createElement("input");
+  const body = document.querySelector("body");
+  input.setAttribute("value", value);
+  body.appendChild(input);
+  input.select();
+  document.execCommand("copy");
+}
+
 module.exports = {
   dateFormat,
   deepClone,
@@ -151,4 +199,7 @@ module.exports = {
   arrGroup,
   IsPC,
   SUM,
+  download,
+  watchScroll,
+  copy,
 };

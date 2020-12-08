@@ -28,7 +28,7 @@
 
 ##### 时间格式化 `dateFormat( input | type )` 
    1. `input (String | Number)`： `时间戳，为空获取当前时间`
-   2. `type (String) 可选值`：`yyyy/MM/dd HH:mm:ss` `yyyy/MM/dd` `HH:mm:ss` `yyyy-MM-dd`
+   2. `type (String) 可选值`：`yyyy/MM/dd HH:mm:ss` `yyyy/MM/dd` `HH:mm:ss` `yyyy-MM-dd` `yyyy年MM月dd日 HH时mm分ss秒`
    
 ##### 深拷贝 `deepClone( obj )` 
 1. 任意参数
@@ -53,3 +53,10 @@
 1. `data(Array)`:`*数组`
 2. `attr(String)`:`数组求和所依据的属性；如果是数组对象，则必填`
 
+##### 下载
+1. `url(String)`:`*当前下载的URL`
+2. `type(String)`:`文件类型，IE下使用`
+3. `name(String)`: `文件名称`
+
+##### 复制
+1. `value( 基本类型 )`
