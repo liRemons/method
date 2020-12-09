@@ -53,16 +53,16 @@
 1. `data(Array)`:`*数组`
 2. `attr(String)`:`数组求和所依据的属性；如果是数组对象，则必填`
 
-##### 下载
+##### 下载 `download( url , type , name)`
 1. `url(String)`:`*当前下载的URL`
 2. `type(String)`:`文件类型，IE下使用`
 3. `name(String)`: `文件名称`
 
 
-##### 监听滚动条事件
+##### 监听滚动条事件 `watchScroll( fn , delay )`
 1. `fn(function) : *传递函数，会触发此函数`
 2. `delay(Number): 防抖，默认 1 s 触发一次，单位（ms）`
 
 
-##### 复制
+##### 复制 `copy( value )`
 1. `value( 基本类型 )`
