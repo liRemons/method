@@ -168,7 +168,8 @@ function download(url, type, name) {
 }
 
 // 滚动条监听
-function watchScroll(delay, scrollFn) {
+function watchScroll(scrollFn, delay) {
+  if (!delay) delay = 1000;
   const debonce = (fn, delay) => {
     let timer = null;
     return () => {
