@@ -156,7 +156,7 @@ function SUM(arr, attr) {
 }
 
 // 下载
-function download(url, type, name) {
+function download(url, type, name = "") {
   const a = document.createElement("a");
   a.setAttribute("download", name);
   a.setAttribute("href", url);

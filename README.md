@@ -17,11 +17,11 @@
 
 #### 安装教程
 
-1.  `npm i methods-remons`
+1.  `npm i methods-r`
 
 #### 使用说明
 
-1. 引入：  `import methods from 'methods-remons'`
+1. 引入：  `import methods from 'methods-r'`
 2. 使用：`methods.函数名(参数)`
 
 #### 函数说明 (* 为必填)
