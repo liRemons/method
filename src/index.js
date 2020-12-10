@@ -8,13 +8,4 @@
  */
 
 let methods = require("./methods");
-module.exports = {
-  dateFormat: methods.dateFormat,
-  deepClone: methods.deepClone,
-  removeArrRepeat: methods.removeArrRepeat,
-  arrSUM: methods.arrSUM,
-  arrFlat: methods.arrFlat,
-  arrGroup: methods.arrGroup,
-  IsPC: methods.IsPC,
-  SUM: methods.SUM,
-};
+module.exports = methods;
