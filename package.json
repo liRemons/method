@@ -1,5 +1,5 @@
 {
-    "name": "methods-remons",
+    "name": "methods-r",
     "version": "1.0.9",
     "description": "a plugin which can show time in chinese and english",
     "main": "index.js",
@@ -12,7 +12,7 @@
         "type": "git",
         "url": "https://gitee.com/Remons/method.git"
     },
-    "Keywords": "methods-remons",
+    "Keywords": "methods-r",
     "author": "Remons",
     "license": "MIT",
     "devDependencies": {
