@@ -36,13 +36,7 @@
 ##### 数组对象去重 `removeArrRepeat( arr,attribute )`
 1. `arr (Array)`:`数组对象`
 2. `attribute (String)`:`*根据参数去重`
-   
-##### 数组求和 `arrSUM ( data ) `
-1. `data(Array)`:`*数字数组`
-   
-##### 数组铺平 `arrFlat ( data )`
-1. `data(Array)`:`*一维或多维数组`
-   
+     
 ##### 数组分组 `arrGroup( data , num)`
 1. `data(Array)`:`*所要分组的数组`
 2. `num(Number)`:`*几个分成一组`

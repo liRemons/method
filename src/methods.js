@@ -76,29 +76,6 @@ function removeArrRepeat(arr, attribute) {
   return arr;
 }
 
-// 数组求和
-function arrSUM(data) {
-  if (data.length === 0) {
-    return 0;
-  }
-  return data.reduce((total, value) => {
-    return total + value;
-  });
-}
-
-//数组铺平
-function arrFlat(data) {
-  if (data instanceof Array) {
-    data.forEach((item) => {
-      if (item instanceof Array) {
-        item = arrFlat(item);
-      } else {
-        data = data.flat();
-      }
-    });
-  }
-  return data;
-}
 
 // 数组分组
 function arrGroup(data, num) {
@@ -191,14 +168,13 @@ function copy(value) {
   body.appendChild(input);
   input.select();
   document.execCommand("copy");
+  body.removeChild(input);
 }
 
 module.exports = {
   dateFormat,
   deepClone,
   removeArrRepeat,
-  arrSUM,
-  arrFlat,
   arrGroup,
   IsPC,
   SUM,
