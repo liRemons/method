@@ -168,7 +168,7 @@ function download(url, type, name = "") {
 }
 
 // 滚动条监听
-function watchScroll(scrollFn, delay) {
+function watchScroll(scrollFn, delay, el = window) {
   if (!delay) delay = 1000;
   const debonce = (fn, delay) => {
     let timer = null;
@@ -179,13 +179,15 @@ function watchScroll(scrollFn, delay) {
       timer = setTimeout(fn, delay);
     };
   };
-  window.onscroll = debonce(scrollFn, delay);
+  el.onscroll = debonce(scrollFn, delay);
 }
+
 // 复制内容
 function copy(value) {
   const input = document.createElement("input");
   const body = document.querySelector("body");
   input.setAttribute("value", value);
+  input.setAttribute("style", "z-index:-1");
   body.appendChild(input);
   input.select();
   document.execCommand("copy");
