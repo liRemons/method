@@ -1,11 +1,11 @@
 <!--
- * @Descripttion: 
- * @version: 
+ * @Descripttion:
+ * @version:
  * @Author: Remons
  * @Date: 2020-07-18 18:06:06
  * @LastEditors: Remons
  * @LastEditTime: 2020-07-19 19:04:20
---> 
+-->
 # method
 
 #### 介绍
@@ -26,17 +26,17 @@
 
 #### 函数说明 (* 为必填)
 
-##### 时间格式化 `dateFormat( input | type )` 
+##### 时间格式化 `dateFormat( input | type )`
    1. `input (String | Number)`： `时间戳，为空获取当前时间`
    2. `type (String) 可选值`：`yyyy/MM/dd HH:mm:ss` `yyyy/MM/dd` `HH:mm:ss` `yyyy-MM-dd` `yyyy年MM月dd日 HH时mm分ss秒`
-   
-##### 深拷贝 `deepClone( obj )` 
+
+##### 深拷贝 `deepClone( obj )`
 1. 任意参数
-   
+
 ##### 数组对象去重 `removeArrRepeat( arr,attribute )`
 1. `arr (Array)`:`数组对象`
-2. `attribute (String)`:`*根据参数去重`
-     
+2. `attribute (String)`:`根据参数去重，不传则默认根据数组元素去重`
+
 ##### 数组分组 `arrGroup( data , num)`
 1. `data(Array)`:`*所要分组的数组`
 2. `num(Number)`:`*几个分成一组`
