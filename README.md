@@ -57,7 +57,7 @@
 1. `fn(function) : *传递函数，会触发此函数`
 2. `delay(Number): 防抖，默认 1 s 触发一次，单位（ms）`
 3. `el(Element):监听滚动条元素，默认window`
-
+ 
 
 ##### 复制 `copy( value )`
 1. `value( 基本类型 )`
