@@ -122,7 +122,7 @@ function IsPC() {
 // 数组求和
 function SUM(arr, attr) {
   let type;
-  arr.forEach((item,index) => {
+  arr.forEach((item, index) => {
     if (typeof item == "number" || typeof item === "string") {
       type = "number";
       arr[index] = Number(item)
@@ -173,6 +173,37 @@ function copy(value) {
   document.execCommand("copy");
   body.removeChild(input);
 }
+// 预览图片
+function viewImg(e = window.event) {
+  if (e.target.nodeName === "IMG" && e.target.currentSrc) {
+    let div = document.createElement("div");
+    let img = document.createElement("img");
+    div.setAttribute(
+      "style",
+      `position: fixed;
+      z-index: 2001;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      background: rgb(0 0 0 / 33%);
+      height: 100%;
+      top: 0;`
+    );
+    div.setAttribute("id", "remons-view-box");
+    img.setAttribute("src", e.target.currentSrc);
+    img.setAttribute("style", "max-height: 100%; max-weight: 100%");
+    img.setAttribute("id", "remons-view-img");
+    document.body.appendChild(div);
+    document.querySelector("#remons-view-box").appendChild(img);
+    let imgBox = document.querySelector("#remons-view-box");
+    if (imgBox) {
+      imgBox.addEventListener("click", () => {
+        document.body.removeChild(imgBox);
+      });
+    }
+  }
+}
 
 module.exports = {
   dateFormat,
@@ -184,4 +215,5 @@ module.exports = {
   download,
   watchScroll,
   copy,
+  viewImg
 };
