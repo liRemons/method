@@ -60,6 +60,6 @@
  
 
 ##### 复制 `copy( value )`
-1. `value( 基本类型 )`
+1. `value( 文本 | DOM )`
 
 ##### 预览图片 `viewImg()`

@@ -125,7 +125,7 @@ function SUM(arr, attr) {
   arr.forEach((item, index) => {
     if (typeof item == "number" || typeof item === "string") {
       type = "number";
-      arr[index] = Number(item)
+      arr[index] = Number(item);
     }
   });
   if (type === "number") {
@@ -163,15 +163,31 @@ function watchScroll(scrollFn, delay, el = window) {
 }
 
 // 复制内容
-function copy(value) {
-  const input = document.createElement("input");
-  const body = document.querySelector("body");
-  input.setAttribute("value", value);
-  input.setAttribute("style", "z-index:-1");
-  body.appendChild(input);
-  input.select();
-  document.execCommand("copy");
-  body.removeChild(input);
+function copy(text) {
+  if (typeof text === "object") {
+    if (document.body.createTextRange) {
+      const range = document.body.createTextRange();
+      range.moveToElementText(text);
+      range.select();
+    } else if (window.getSelection) {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(text);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+    document.execCommand("Copy", "false", null);
+    window.getSelection().empty();
+  } else {
+    const input = document.createElement("input");
+    const body = document.querySelector("body");
+    input.setAttribute("value", text);
+    input.setAttribute("style", "z-index:-1");
+    body.appendChild(input);
+    input.select();
+    document.execCommand("copy");
+    body.removeChild(input);
+  }
 }
 // 预览图片
 function viewImg(e = window.event) {
@@ -215,5 +231,5 @@ module.exports = {
   download,
   watchScroll,
   copy,
-  viewImg
+  viewImg,
 };
