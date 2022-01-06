@@ -63,3 +63,10 @@
 1. `value( 文本 | DOM )`
 
 ##### 预览图片 `viewImg()`
+
+##### 打开一个应用 `openApp({url, params})`
+1. `url 路由`
+2. `params 传递的参数（对象）`
+
+##### 获取url中的参数  `getSearchParams(name)`
+1. `name: 字段，为空则返回所有参数`
