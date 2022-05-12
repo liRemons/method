@@ -70,3 +70,8 @@
 
 ##### 获取url中的参数  `getSearchParams(name)`
 1. `name: 字段，为空则返回所有参数`
+
+
+##### 防抖 `debounce(fn, delay)`
+1. `fn: (fn)`
+2. `delay: (default = 500ms)`

@@ -224,20 +224,30 @@ export const viewImg = (e = window.event) => {
 export const openApp = ({ url, params }) => {
   if (url) {
     const newParams = new URLSearchParams(params);
-    window.location =newParams.toString()?  `${url}?${newParams.toString()}`:url;
+    window.location = newParams.toString()
+      ? `${url}?${newParams.toString()}`
+      : url;
   } else {
     console.error('url 错误');
   }
-}
-
+};
 
 export const getSearchParams = (name) => {
   const params = new URLSearchParams(decodeURI(window.location.search));
   const obj = {};
   const keys = [...params.keys()];
-  keys.forEach(key => {
+  keys.forEach((key) => {
     obj[key] = params.get(key);
-  })
+  });
   return !name ? obj : params.get(name);
-}
+};
 
+export const debounce = (fun, delay = 500) => {
+  return (args) => {
+    let _args = args;
+    clearTimeout(fun.id);
+    fun.id = setTimeout(() => {
+      fun.call(this, _args);
+    }, delay);
+  };
+};
