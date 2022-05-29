@@ -179,14 +179,14 @@ export const copy = (text) => {
     document.execCommand('Copy', 'false', null);
     window.getSelection().empty();
   } else {
-    const input = document.createElement('textarea');
+    const textarea = document.createElement('textarea');
     const body = document.querySelector('body');
-    input.setAttribute('value', text);
-    input.setAttribute('style', 'z-index:-1');
-    body.appendChild(input);
-    input.select();
+    textarea.value = text;
+    textarea.setAttribute('style', 'z-index:-1');
+    body.appendChild(textarea);
+    textarea.select();
     document.execCommand('copy');
-    body.removeChild(input);
+    body.removeChild(textarea);
   }
 };
 // 预览图片

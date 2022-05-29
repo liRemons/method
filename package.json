@@ -1,6 +1,6 @@
 {
     "name": "methods-r",
-    "version": "1.2.13",
+    "version": "1.2.14",
     "description": "a plugin which can show time in chinese and english",
     "main": "index.js",
     "scripts": {
