@@ -179,7 +179,7 @@ export const copy = (text) => {
     document.execCommand('Copy', 'false', null);
     window.getSelection().empty();
   } else {
-    const input = document.createElement('input');
+    const input = document.createElement('textarea');
     const body = document.querySelector('body');
     input.setAttribute('value', text);
     input.setAttribute('style', 'z-index:-1');
