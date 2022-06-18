@@ -1,7 +1,7 @@
 {
     "name": "methods-r",
-    "version": "1.2.14",
-    "description": "a plugin which can show time in chinese and english",
+    "version": "1.2.15",
+    "description": "工具函数",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",

@@ -75,3 +75,8 @@
 ##### 防抖 `debounce(fn, delay)`
 1. `fn: (fn)`
 2. `delay: (default = 500ms)`
+
+
+##### 版本号 `compareVersion(v1, v2)`
+1. `v1`,`v2` 版本号
+返回版本号大的，如相等，则返回`false`

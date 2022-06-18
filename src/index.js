@@ -251,3 +251,20 @@ export const debounce = (fun, delay = 500) => {
     }, delay);
   };
 };
+
+export const compareVersion = (v1, v2) => {
+  const v1Arr = v1.split('.');
+  const v2Arr = v2.split('.');
+  const maxLength = Math.max(v1Arr.length, v2Arr.length);
+  for (let index = 0; index < maxLength; index++) {
+    const v1Index = +v1Arr[index]; 
+    const v2Index = +v2Arr[index]; 
+    if (v1Index > v2Index) {
+      return v1;
+    }
+    if (v1Index < v2Index) {
+      return v2;
+    }
+  }
+  return false
+}
