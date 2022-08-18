@@ -1,28 +1,25 @@
 {
-    "name": "methods-r",
-    "version": "1.2.15",
-    "description": "工具函数",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "webpack --mode development",
-        "build": "webpack --mode production"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/liRemons/method.git"
-    },
-    "Keywords": "methods-r",
-    "author": "Remons",
-    "license": "MIT",
-    "devDependencies": {
-        "babel-core": "^6.26.0",
-        "babel-loader": "^7.1.2",
-        "webpack": "^4.44.0",
-        "webpack-cli": "^3.3.12"
-    },
-    "dependencies": {
-        "babel-preset-es2015": "^6.24.1"
-    },
-    "keywords": []
+  "name": "methods-r",
+  "version": "2.0.0-rc.1",
+  "description": "工具函数",
+  "main": "dist/umd/index.min.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liRemons/method.git"
+  },
+  "Keywords": "methods-r",
+  "author": "Remons",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "keywords": []
 }
